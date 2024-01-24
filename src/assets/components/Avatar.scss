@@ -1,0 +1,9 @@
+$avatar-size: 45px;
+
+.avatar {
+    height: $avatar-size;
+    width: $avatar-size;
+    border-radius: 50%;
+    border: none;
+    display: block;
+}

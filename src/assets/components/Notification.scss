@@ -1,0 +1,85 @@
+@use '../../variables' as *;
+
+.notification {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: $color-white;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 3rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s ease;
+
+    &.unread {
+        background-color: $color-lightest-grayish-blue;
+    }
+}
+
+.notification-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-family: $font-base-family;
+    color: $color-dark-grayish-blue;
+
+    & .name {
+        color: $color-dark-blue;
+    }
+
+    & a {
+        color: $color-dark-grayish-blue;
+    }
+
+    & .name, a {
+        text-decoration: none;
+        font-weight: $font-weight-bold;
+        &:hover {
+            color: $color-blue;
+        }
+    }
+
+    & p, span{
+        padding: 0;
+        margin: 0;
+    }
+
+    & span {
+        color: $color-grayish-blue;
+    
+        &.notification-unread-marker {
+            color: $color-red;
+            font-size: 1.1rem;
+        }
+    }
+
+    & .notification-message {
+        border: 1px solid $color-light-grayish-blue;
+        font-weight: $font-weight-normal;
+        border-radius: 0.2rem;
+        padding: 1rem;
+        margin-top: 0.5rem;
+
+        &:hover {
+            color: $color-dark-grayish-blue;
+            background-color: $color-lighter-grayish-blue;
+            border: 1px solid $color-lighter-grayish-blue;
+        }
+    }
+}
+
+
+.notification-image-link {
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 0.5rem;
+    border: 2px solid transparent;
+    margin-left: auto;
+    height: 2.5rem;
+    width: 2.5rem;
+    &:hover{
+        border: 2px solid $color-lighter-grayish-blue;
+    }
+}

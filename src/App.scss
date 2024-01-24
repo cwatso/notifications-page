@@ -1,0 +1,61 @@
+@use 'variables' as *;
+
+#root {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+}
+
+body {
+  background-color: $color-lightest-grayish-blue;
+}
+
+.app {
+  background-color: $color-white;
+  padding: 0rem 1rem;
+  max-width: 650px;
+  -webkit-box-shadow: 0 1rem 2rem rgba($color-grayish-blue, 0.1);
+  box-shadow: 0 1rem 2rem rgba($color-grayish-blue, 0.1);
+}
+
+.app-header {
+  font-family: $font-base-family;
+  color: $color-dark-blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 0;
+  & h1{
+    font-size: $font-size-header;
+  }
+
+  & .unread-count{
+    color: $color-white;
+    background-color: $color-blue;
+    font-size: $font-base-size;
+    border-radius: 0.5rem;
+    padding: 0.1rem 0.75rem 0.25rem;
+    margin-left: 0.5rem;
+  }
+
+  & button{
+    margin-left: auto;
+    background: $color-white;
+    display: block;
+    border: 0;
+    font-family: $font-base-family;
+    font-size: $font-base-size;
+    color: $color-dark-grayish-blue;
+    &:hover{
+      color: $color-blue;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  #root {padding: 2rem;}
+  .app {border-radius: 1rem;
+    padding: 0rem 2rem;}
+}
